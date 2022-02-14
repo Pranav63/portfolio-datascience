@@ -3,8 +3,6 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import thumbInkdrop from "../public/images/works/dave4.jpeg"
-import HP from "../public/images/works/dave11.jpeg"
-
 
 const Posts = () => (
   <Layout title="Posts">

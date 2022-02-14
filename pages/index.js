@@ -7,7 +7,6 @@ import {
 	Heading, 
 	Image, 
 	ListItem,
-	SimpleGrid,
 	List,
 	Icon,
 	useColorModeValue} from '@chakra-ui/react'
@@ -21,7 +20,6 @@ import {
 	IoLogoGithub,
 	IoLogoLinkedin
 } from 'react-icons/io5'
-import {GridItem} from '../components/grid-item'
 
 const Page = () => {
 	return(
