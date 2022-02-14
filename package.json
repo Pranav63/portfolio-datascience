@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Pranav's portfolio website",
   "scripts": {
+    "start": "node_modules/next/dist/bin start -p $PORT",
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
     "prettier": "prettier -write .",
