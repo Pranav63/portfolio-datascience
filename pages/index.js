@@ -7,6 +7,7 @@ import {
 	Heading, 
 	Image, 
 	ListItem,
+	SimpleGrid,
 	List,
 	Icon,
 	useColorModeValue} from '@chakra-ui/react'
@@ -14,9 +15,17 @@ import Section from "../components/section"
 import Paragraph from "../components/paragraph"
 import {ChevronRightIcon} from "@chakra-ui/icons"
 import {BioSection, BioYear} from "../components/bio"
+import Layout from "../components/layouts/article"
+import {
+	IoLogoInstagram,
+	IoLogoGithub,
+	IoLogoLinkedin
+} from 'react-icons/io5'
+import {GridItem} from '../components/grid-item'
 
 const Page = () => {
 	return(
+		<Layout>
 		<Container>
 			<Box borderRadius='lg' 
 			bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')}
@@ -39,7 +48,7 @@ const Page = () => {
 				>
 				<Image 
 				borderColor="whiteAlpha.800" borderWidth={2}
-				src='/images/pranav.jpeg'
+				src='/images/pp.jpeg'
 				borderStyle="solid"
 				maxWidth="100px"
 				borderRadius="full"
@@ -105,8 +114,40 @@ const Page = () => {
 				</Paragraph>
 
 		</Section>
-	</Container>
 
+		<Section delay={0.3}>
+		<Heading as='h3' variant='section-title'>
+			Find me Across the Internet
+		</Heading>
+		<List>
+		<ListItem>
+			<Link href="https://www.linkedin.com/in/pranavarora63/" target="_blank">
+				<Button variant="ghost" colorScheme="teal" 
+				leftIcon={<Icon as={IoLogoLinkedin}/>}>
+				@Pranavarora63
+				</Button>
+			</Link>
+			</ListItem>
+			<ListItem>
+			<Link href="https:/github.com/Pranav63" target="_blank">
+				<Button variant="ghost" colorScheme="teal" 
+				leftIcon={<Icon as={IoLogoGithub}/>}>
+				@Pranav63
+				</Button>
+				</Link>
+			</ListItem>
+				<ListItem>
+			<Link href="https://www.instagram.com/arora.pranav1816/" target="_blank">
+				<Button variant="ghost" colorScheme="teal" 
+				leftIcon={<Icon as={IoLogoInstagram}/>}>
+				@Arora.pranav1816
+				</Button>
+			</Link>
+			</ListItem>
+		</List>
+		</Section>
+	</Container>
+	</Layout>
 					)
 }
 
