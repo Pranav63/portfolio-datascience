@@ -3,7 +3,7 @@ import Section from '../components/section'
 import {WorkGridItem} from "../components/grid-item"
 import Layout from "../components/layouts/article"
 
-import samsung from "../public/images/samsung.png"
+import samsung from "../public/images/samsung.jpeg"
 import HP from "../public/images/hp.png"
 
 
