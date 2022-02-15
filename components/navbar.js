@@ -20,22 +20,22 @@ import {HamburgerIcon} from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 
 
-const LinkItem = ({href, path, _target, children}) => {
-	const active = path === href 
-	const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
-	return(
-		<NextLink href= {href} passHref>
-		<Link 
-			p={2}
-			bg = {active ? 'grassTeal': undefined}
-			color = {active ? '#202023': inactiveColor}
-			_target ={_target}
-		>
-		{children}
-		</Link>
-		</NextLink>
-
-		)
+const LinkItem = ({ href, path, _target, children, ...props }) => {
+  const active = path === href
+  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+  return (
+    <NextLink href={href} passHref>
+      <Link
+        p={2}
+        bg={active ? 'cyan' : undefined}
+        color={active ? '#202023' : inactiveColor}
+        _target={_target}
+        {...props}
+      >
+        {children}
+      </Link>
+    </NextLink>
+  )
 }
 
 const NavBar = props => {
@@ -75,6 +75,7 @@ const NavBar = props => {
 		<LinkItem href="/works" path={path}>
             Work Ex
           </LinkItem>
+
 		<LinkItem href="/projects" path={path}>
             Projects
           </LinkItem>
@@ -98,14 +99,15 @@ const NavBar = props => {
 		</Stack>
 		<Box flex={1} align="right">
 		<ThemeToggleButton/>
+
 			<Box ml={2} display={{base: 'inline-block'}}>
 				<Menu isLazy id="navbar-menu">
 					<MenuButton
 					as={IconButton}
 					icon={<HamburgerIcon/>}
 					variant="outline"
-					aria-label="Options">
-					</MenuButton>
+					aria-label="Options"/>
+					
 					<MenuList>
 						<NextLink href='/' passHref>
 							<MenuItem as={Link}>About</MenuItem>

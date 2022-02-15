@@ -3,8 +3,8 @@ import Section from '../components/section'
 import {WorkGridItem} from "../components/grid-item"
 import Layout from "../components/layouts/article"
 
-import thumbInkdrop from "../public/images/works/dave4.jpeg"
-import HP from "../public/images/works/dave11.jpeg"
+import samsung from "../public/images/samsung.png"
+import HP from "../public/images/hp.png"
 
 
 const Works = () =>
@@ -23,7 +23,7 @@ const Works = () =>
       </Section>
 		<SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="intern" title="Intern" thumbnail={thumbInkdrop}>
+          <WorkGridItem id="intern" title="Intern" thumbnail={samsung}>
             Worked at Samsung and Dell as SDE intern 
           </WorkGridItem>
         </Section>
@@ -47,7 +47,7 @@ const Works = () =>
 
 		<SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="dentsu" title="Dentsu" thumbnail={thumbInkdrop}>
+          <WorkGridItem id="dentsu" title="Dentsu" thumbnail={samsung}>
             Worked at Dentsu as a Junior Data scientist 
           </WorkGridItem>
         </Section>
