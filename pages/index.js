@@ -37,7 +37,7 @@ const Page = () => {
 					<Heading as="h2" variant="page-title">
 					Pranav Arora
 					</Heading>
-				<p> (AS|EX)prining Data Scientist. Designing models by day Regularizing them by night.  
+				<p> (AS|EX)piring Data Scientist. Designing models by day Regularizing them by night.  
 				</p>
 				</Box>
 				<Box 
@@ -65,9 +65,9 @@ const Page = () => {
 			 loves Python and ML. He loves tinkering with new technologies and 
 			 is very sincere at his job. He makes his living, trains his body 
 			 and lives on {''}
-			 <NextLink href="/images/circuit.png">
-			 <Link> Github</Link>
-			 </NextLink></Paragraph>
+			 
+			 <Link href="https:/github.com/Pranav63"> Github</Link>
+			 </Paragraph>
 			 <Box align="center" my={4}>
 			 <NextLink href="/works">
 			 	<Button rightIcon={<ChevronRightIcon/>} colorScheme="teal">

@@ -5,7 +5,8 @@ import Layout from "../components/layouts/article"
 
 import samsung from "../public/images/samsung.jpeg"
 import HP from "../public/images/hp.png"
-
+import denstu from "../public/images/denstu.png"
+import Micron from "../publiC/images/Micron.jpeg"
 
 const Works = () =>
 (
@@ -47,12 +48,12 @@ const Works = () =>
 
 		<SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="dentsu" title="Dentsu" thumbnail={samsung}>
+          <WorkGridItem id="dentsu" title="Dentsu" thumbnail={denstu}>
             Worked at Dentsu as a Junior Data scientist 
           </WorkGridItem>
         </Section>
          <Section>
-          <WorkGridItem id="Micron" title="Micron" thumbnail={HP}>
+          <WorkGridItem id="Micron" title="Micron" thumbnail={Micron}>
      		Joined Mircon as a Sr. Data Scientist
           </WorkGridItem>
         </Section>
