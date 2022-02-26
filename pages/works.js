@@ -6,7 +6,7 @@ import Layout from "../components/layouts/article"
 import samsung from "../public/images/samsung.jpeg"
 import HP from "../public/images/hp.png"
 import denstu from "../public/images/denstu.png"
-import Micron from "../publiC/images/Micron.jpeg"
+import Micron from "../public/images/Micron.jpeg"
 
 const Works = () =>
 (
