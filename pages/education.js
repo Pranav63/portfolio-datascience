@@ -1,8 +1,8 @@
 import {Container, Heading, SimpleGrid, Divider} from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import {WorkGridItem} from "../components/grid-item"
-import thumbInkdrop from "../public/images/works/dave4.jpeg"
+// import {WorkGridItem} from "../components/grid-item"
+// import thumbInkdrop from "../public/images/works/dave4.jpeg"
 import SMU from "../public/images/smu.jpeg"
 import UPES from "../public/images/upes.jpeg"
 import HBX from "/public/images/hbxresi.jpg"
