@@ -1,4 +1,4 @@
-import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
@@ -7,10 +7,12 @@ import thumbInkdrop from "../public/images/works/dave4.jpeg"
 const Posts = () => (
   <Layout title="Posts">
     <Container>
-      <Heading as="h3" fontSize={20} mb={4}>
-        Popular Posts
+      <Heading as="h3" fontSize={30} mb={4}>
+        Skills
       </Heading>
-
+   <Section delay={0.2}>
+          <Divider my={6} />
+        </Section>
       <Section delay={0.1}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
