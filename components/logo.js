@@ -12,14 +12,17 @@ const LogoBox = styled.span`
 	line-height: 20px;
 	padding: 10px;
 
-	&hover img{
-		transform: rotate(30deg);
+img {
+    transition: 200ms ease;
+  }
+	&:hover img{
+		transform: rotate(50deg);
 	}
 `
 
 const Logo = () =>
 {
-	 const footPrint = `/images/innovation${useColorModeValue("",'')}.png`	
+	 const footPrint = `/images/iconsvenn${useColorModeValue("",'')}.png`	
 	 return(
 	 	<Link href="/">
 	 	<a>

@@ -27,7 +27,7 @@ const Page = () => {
 		<Container>
 			<Box borderRadius='lg' 
 			bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')}
-			 p={3} mb={6} align='center'>
+			 p={3} mb={6} align='center' font-weight= 'bold'>
 			  👋🏻 Hi there, I&apos;m Pranav Data Scientist in Singapore
 			</Box>
 			
@@ -46,7 +46,7 @@ const Page = () => {
 				>
 				<Image 
 				borderColor="whiteAlpha.800" borderWidth={2}
-				src='/images/pp.jpeg'
+				src='/images/Pranav_degree.jpg'
 				borderStyle="solid"
 				maxWidth="100px"
 				borderRadius="full"

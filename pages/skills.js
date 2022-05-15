@@ -5,7 +5,7 @@ import { GridItem } from '../components/grid-item'
 import thumbInkdrop from "../public/images/works/dave4.jpeg"
 
 const Posts = () => (
-  <Layout title="Posts">
+  <Layout title="Skills">
     <Container>
       <Heading as="h3" fontSize={30} mb={4}>
         Skills
