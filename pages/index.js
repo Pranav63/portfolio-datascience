@@ -46,7 +46,7 @@ const Page = () => {
 				>
 				<Image 
 				borderColor="whiteAlpha.800" borderWidth={2}
-				src='/images/Pranav_degree.jpg'
+				src='/images/Pranav_Degree.jpg'
 				borderStyle="solid"
 				maxWidth="100px"
 				borderRadius="full"
