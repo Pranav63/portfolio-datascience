@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Navbar from '../navbar.js'
 import {Box, Container} from '@chakra-ui/react'
 import VoxelDog from "../3dearth"
-import dynamic from "next/dynamic"
+
 
 import Footer from "../footer"
 
