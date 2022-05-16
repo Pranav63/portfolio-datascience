@@ -1,10 +1,9 @@
-import { Container, Heading, SimpleGrid, Divider, VStack} from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider} from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import gan from "../public/images/gan.gif"
 import dataeng from "../public/images/dataeng.gif"
-import thumbInkdrop from "../public/images/dell.jpeg"
 import trader from "../public/images/trader.png"
 import carrace from "../public/images/carrace.gif"
 import sdn from "../public/images/sdn.jpeg"

@@ -1,11 +1,8 @@
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
-import thumbInkdrop from "../public/images/works/dave4.jpeg"
-import { Title, WorkImage, Meta } from '../components/work' 
-import { Container, Badge, Link, List, ListItem, UnorderedList,Heading, SimpleGrid, Divider  } from '@chakra-ui/react'
+import { WorkImage, Meta } from '../components/work' 
+import { Container,List, ListItem, UnorderedList,Heading, Divider  } from '@chakra-ui/react'
 import P from '../components/paragraph'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 
 const Posts = () => (
@@ -20,7 +17,7 @@ const Posts = () => (
   
  <Container>
       <P>
-       “Schooling doesn't assure employment but skill does.”
+       `&apos;`Schooling doesn't assure employment but skill does.`&apos;`
       </P>
        <WorkImage src="/images/skill.gif" alt="skill" />
      

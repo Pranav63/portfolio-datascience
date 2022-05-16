@@ -17,7 +17,7 @@ const Education = () => (
    <Section delay={0.2}>
           <Divider my={4} />
         </Section>
-        <P>"Teachers open the door, but you must enter by yourself"</P>
+        <P>`&quot;`Teachers open the door, but you must enter by yourself`&quot;`</P>
    <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
      <GridItem
