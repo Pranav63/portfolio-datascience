@@ -5,6 +5,8 @@ import SMU from "../public/images/smu.jpeg"
 import UPES from "../public/images/upes.jpeg"
 import HBX from "/public/images/hbxresi.jpg"
 import { GridItem } from '../components/grid-item'
+import P from '../components/paragraph'
+
 
 const Education = () => (
   <Layout title="Education">
@@ -15,6 +17,7 @@ const Education = () => (
    <Section delay={0.2}>
           <Divider my={4} />
         </Section>
+        <P>"Teachers open the door, but you must enter by yourself"</P>
    <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
      <GridItem

@@ -1,8 +1,12 @@
-import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import thumbInkdrop from "../public/images/works/dave4.jpeg"
+import { Title, WorkImage, Meta } from '../components/work' 
+import { Container, Badge, Link, List, ListItem, UnorderedList,Heading, SimpleGrid, Divider  } from '@chakra-ui/react'
+import P from '../components/paragraph'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
+
 
 const Posts = () => (
   <Layout title="Skills">
@@ -13,50 +17,124 @@ const Posts = () => (
    <Section delay={0.2}>
           <Divider my={6} />
         </Section>
-      <Section delay={0.1}>
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            title="My Fish workflow"
-            thumbnail={thumbInkdrop}
-            href="https://www.youtube.com/watch?v=KKxhf50FIPI"
-          />
-          <GridItem
-            title="My desk setup (Late 2020)"
-            thumbnail={thumbInkdrop}
-            href="https://www.youtube.com/watch?v=1OFDMwDlnOE"
-          />
-        </SimpleGrid>
-      </Section>
+  
+ <Container>
+      <P>
+       “Schooling doesn't assure employment but skill does.”
+      </P>
+       <WorkImage src="/images/skill.gif" alt="skill" />
+     
+      <List ml={4} my={5}>
+        <ListItem>
+          <Meta> Data Science Packages </Meta>
+ 			<UnorderedList>
+            <ListItem> 
+            NumPy
+            </ListItem>
+            <ListItem> 
+            Pandas
+            </ListItem>
+            <ListItem> 
+            MatplotLib
+            </ListItem>
+            <ListItem> 
+            OpenCV
+            </ListItem>
+            <ListItem> 
+            Scikit-Learn
+            </ListItem>
+            <ListItem> 
+            DeepSim
+            </ListItem>
+            <ListItem> 
+            Beautiful Soup
+            </ListItem>
+            </UnorderedList>
+        </ListItem> 
 
-      <Section delay={0.3}>
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            title="How I’ve Attracted The First 500 Paid Users For My SaaS That Costs $5/mo"
-            thumbnail={thumbInkdrop}
-            href="https://blog.inkdrop.app/how-ive-attracted-the-first-500-paid-users-for-my-saas-that-costs-5-mo-7a5b94b8e820"
-          />
-          <GridItem
-            title="I stopped setting a financial goal for my SaaS"
-            thumbnail={thumbInkdrop}
-            href="https://blog.inkdrop.app/i-stopped-setting-a-financial-goal-for-my-saas-a92c3db65506"
-          />
-        </SimpleGrid>
-      </Section>
+        <ListItem>
+    
+          <Meta>Programming Languages</Meta>
+          <UnorderedList>
+            <ListItem> 
+            Python
+            </ListItem>
+            <ListItem>
+            SQL
+            </ListItem> 
+            <ListItem>
+            Bash Scripting
+            </ListItem> 
+            </UnorderedList>
+        </ListItem>
 
-      <Section delay={0.5}>
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            title="How to Price Yourself as a Freelance Developer"
-            thumbnail={thumbInkdrop}
-            href="https://blog.inkdrop.app/how-to-price-yourself-as-a-freelance-developer-3453dfd59d91"
-          />
-          <GridItem
-            title="I made my React Native app 50x faster"
-            thumbnail={thumbInkdrop}
-            href="https://www.youtube.com/watch?v=vj723NlrIQc"
-          />
-        </SimpleGrid>
-      </Section>
+        <ListItem>
+        
+          <Meta>DataBase and BigData</Meta>
+          <UnorderedList>
+            <ListItem> 
+            Google Cloud Storage
+            </ListItem>
+            <ListItem> 
+            Big Query 
+            </ListItem>
+            <ListItem> 
+            Spark
+            </ListItem>
+        </UnorderedList>
+        </ListItem>
+
+        <ListItem>     
+          <Meta>Artificial Intelligence</Meta>
+          <UnorderedList>
+            <ListItem> 
+            Machine Learning
+            </ListItem>
+            <ListItem> 
+            Statistical Modelling
+            </ListItem>
+            <ListItem> 
+            Data Wrangling
+            </ListItem>
+       </UnorderedList>
+       </ListItem>
+       
+   <ListItem>
+          <Meta> Viz Tools </Meta>
+          <UnorderedList>
+           <ListItem> 
+            Data Studio
+            </ListItem>
+            <ListItem> 
+            Datorama (Salesforce)
+            </ListItem>
+            <ListItem> 
+            Tableau
+            </ListItem>
+       </UnorderedList>
+       </ListItem>
+
+         <ListItem>
+          <Meta> APIs and Frameworks </Meta>
+          <UnorderedList>
+           <ListItem> 
+            ReactJS
+            </ListItem>
+            <ListItem> 
+            Flask
+            </ListItem>
+            <ListItem> 
+            Google ML 
+            </ListItem>
+       </UnorderedList>
+       </ListItem>
+
+      </List>
+
+     
+    </Container>
+
+      
     </Container>
   </Layout>
 )

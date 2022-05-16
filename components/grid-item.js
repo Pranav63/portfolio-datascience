@@ -11,6 +11,7 @@ export const GridItem = ({children, href, title, thumbnail}) =>(
 	alt={title}
 	className="grid-item-thumbnail"
 	placeholder = 'blur'
+	blurDataURL={`/_next/image?url=${thumbnail}&w=16&q=1`}
 	loading ='lazy'/>
 	<LinkOverlay href={href} target="_blank">
 		<Text mt={2}> {title} </Text>
