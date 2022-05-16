@@ -17,7 +17,7 @@ const Posts = () => (
   
  <Container>
       <P>
-       `&apos;`Schooling doesn't assure employment but skill does.`&apos;`
+       `&apos;`Schooling doesn`&apos;`t assure employment but skill does.`&apos;`
       </P>
        <WorkImage src="/images/skill.gif" alt="skill" />
      
