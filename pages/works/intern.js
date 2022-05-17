@@ -23,48 +23,51 @@ const Post = () => (
      
       <List ml={4} my={5}>
         <ListItem>
-          <Meta> HP </Meta>
+          <Meta> HP </Meta> <Badge>May 2020 - Nov 2020</Badge>
       <UnorderedList>
             <ListItem> 
-            
+            Built an end-to-end production grade image processing solution to automate smart measurement in the manufacturing line,
+saving up to <b>3 min per image set and 20 manhours per week.</b>
+
             </ListItem>
-            
+            <ListItem>
+            Analyzed and built predictive quality machine learning models for separating good versus bad printheads from x-ray image
+which lead to <b>5$ cost reduction per printhead.</b>
+</ListItem>
             </UnorderedList>
         </ListItem> 
 
         <ListItem>
     
-          <Meta>DELL</Meta>
+          <Meta>DELL</Meta> <Badge>May 2018 - July 2018</Badge>
           <UnorderedList>
             <ListItem> 
-            Developed and managed reporting dashboards for multiple clients to provide a holistic view of the key KPIs for reporting marketing data across various channels and <b>reducing the in-house post campaign analysis time by 50%.</b>
+            Analyzed and monitored application servers used for server logs management and prevented servers’ downtime using Splunk tool.
+
             </ListItem>
             <ListItem>
-            Scoping new products to fully utilize clients&apos; campaigns&apos; data, such as building performance predictor to accurately determine the upper and lower funnel performance parameters and <b>saving 20% cost on media planning and activation.</b>
+             Measured and administered software and hardware utilizations of the remote servers and presented abstracted information to the senior executives.
+            
             </ListItem> 
-            <ListItem>
-              Developed and scheduled data pieplines to save third party reliance for ingesting marketing performance data from various platforms <b> economizing on cost by 4k$/month</b>
-            </ListItem> 
+            
             </UnorderedList>
         </ListItem>
 
         
 
         <ListItem>     
-          <Meta>Samsung</Meta>
+          <Meta>Samsung</Meta> <Badge>May 2017 - July 2017</Badge>
           <UnorderedList>
             <ListItem> 
-            Google Cloud Platform (IAM,GKE,GCS,BigQuery)
+            Collaborated with a team of interns to generate ideas contributing to a project for Indian railways.
+
             </ListItem>
             <ListItem> 
-            Python and SQL
+           Constructed multiple modules for an app that would administer child trafficking on railway stations and engineered
+asolution for in-train chat app that wouldlet auser connect to the people on train in caseof emergencies.
             </ListItem>
-            <ListItem> 
-            Salesforce Datorama
-            </ListItem>
-            <ListItem> 
-            Data Studio
-            </ListItem>
+            
+           
        </UnorderedList>
        </ListItem>
    

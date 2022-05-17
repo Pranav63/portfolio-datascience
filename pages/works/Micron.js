@@ -37,15 +37,17 @@ const Post = () => (
           <Meta>Key Highlights</Meta>
           <UnorderedList>
             <ListItem> 
-            Developed and managed reporting dashboards for multiple clients to provide a holistic view of the key KPIs for reporting marketing data across various channels and <b>reducing the in-house post campaign analysis time by 50%.</b>
+            Developed well defined master data referred by planning and operations applications with mappings between the datasets 
+            . A single source of truth solution to<b> save manual data input and maintenance time by 80% </b>
+              
             </ListItem>
             <ListItem>
-            Scoping new products to fully utilize clients&apos; campaigns&apos; data, such as building performance predictor to accurately determine the upper and lower funnel performance parameters and <b>saving 20% cost on media planning and activation.</b>
+            Optimize knobs in fab status using RL agents that recommend weight 
+            values for factors to maximize wafer movements
+            while satisfying step move target and<b> minimizing queue time by 50%.</b>
+
             </ListItem> 
-            <ListItem>
-              Developed and scheduled data pieplines to save third party reliance for ingesting marketing performance data from various platforms <b> economizing on cost by 4k$/month</b>
-            </ListItem> 
-            </UnorderedList>
+          </UnorderedList>
         </ListItem>
 
         
@@ -54,16 +56,16 @@ const Post = () => (
           <Meta>Hands-on Tech Stack</Meta>
           <UnorderedList>
             <ListItem> 
-            Google Cloud Platform (IAM,GKE,GCS,BigQuery)
+            Google Cloud Platform (GCS,BigQuery)
             </ListItem>
             <ListItem> 
             Python and SQL
             </ListItem>
             <ListItem> 
-            Salesforce Datorama
+            Micron&apos;s Internal Tools Stack
             </ListItem>
             <ListItem> 
-            Data Studio
+            Reinforcement learning (PPO algo and DeepSim)
             </ListItem>
        </UnorderedList>
        </ListItem>

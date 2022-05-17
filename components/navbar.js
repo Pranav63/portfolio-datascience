@@ -88,7 +88,7 @@ const NavBar = props => {
           </LinkItem>
          	<LinkItem 
          	_target='_blank'
-				href="https://drive.google.com/file/d/1_4qaD7HbRTjn0eA3EOidsuoYoqIRsVWb/view?usp=sharing"
+				href="https://drive.google.com/file/d/1GYfmdI9gHfQq3gY-A7uCPqJStPKM71r8/view?usp=sharing"
 				path={path}
 				display='inline-flex'
 				alignItems='center'
@@ -126,7 +126,7 @@ const NavBar = props => {
 							<MenuItem as={Link}>Skills</MenuItem>
 						</NextLink>
 						<MenuItem as={Link}> 
-					<a href={"https://drive.google.com/file/d/1_4qaD7HbRTjn0eA3EOidsuoYoqIRsVWb/view?usp=sharing"}>Resume</a>
+					<a href={"https://drive.google.com/file/d/1GYfmdI9gHfQq3gY-A7uCPqJStPKM71r8/view?usp=sharing"}>Resume</a>
 						</MenuItem>
 						
 
