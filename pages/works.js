@@ -6,7 +6,6 @@ import Layout from "../components/layouts/article"
 import denstu from "../public/images/denstu.png"
 import Micron from "../public/images/Micron.jpeg"
 import Internn from "../public/images/MergedImages.png"
-import P from '../components/paragraph'
 
 const Works = () =>
 (
