@@ -2,7 +2,6 @@ import Layout from '../../components/layouts/article'
 import Section from '../../components/section'
 import { Title, WorkImage, Meta } from '../../components/work' 
 import { Badge,Container,List, ListItem, UnorderedList,Heading, Divider  } from '@chakra-ui/react'
-import P from '../../components/paragraph'
 
 
 const Post = () => (
