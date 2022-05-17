@@ -1,48 +1,83 @@
-import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
+import Section from '../../components/section'
+import { Title, WorkImage, Meta } from '../../components/work' 
+import { Badge,Container,List, ListItem, UnorderedList,Heading, Divider  } from '@chakra-ui/react'
+import P from '../../components/paragraph'
 
-const Work = () => (
-  <Layout title="Inkdrop">
+
+const Post = () => (
+  <Layout title="Dentsu">
     <Container>
+      <Heading as="h3" fontSize={30} mb={3}>
+        Internships
+      </Heading>
       <Title>
-        Inkdrop <Badge>2016-</Badge>
+        Software Engineer/Data Science Intern <Badge>Jun 2017 - Jun 2020</Badge>
       </Title>
-      <P>
-        A Markdown note-taking app with 100+ plugins, cross-platform and
-        encrypted data sync support. The life-time revenue is more than $200k.
-      </P>
-      <List ml={4} my={4}>
+   <Section delay={0.2}>
+          <Divider my={6} />
+        </Section>
+  
+ <Container>
+     
+       <WorkImage src="/images/intern.gif" alt="skill" />
+     
+      <List ml={4} my={5}>
         <ListItem>
-          <Meta>Website</Meta>
-          <Link href="https://www.inkdrop.app/">
-            https://www.inkdrop.app/ <ExternalLinkIcon mx="2px" />
-          </Link>
-        </ListItem>
+          <Meta> HP </Meta>
+      <UnorderedList>
+            <ListItem> 
+            
+            </ListItem>
+            
+            </UnorderedList>
+        </ListItem> 
+
         <ListItem>
-          <Meta>Platform</Meta>
-          <span>Windows/macOS/Linux/iOS/Android</span>
+    
+          <Meta>DELL</Meta>
+          <UnorderedList>
+            <ListItem> 
+            Developed and managed reporting dashboards for multiple clients to provide a holistic view of the key KPIs for reporting marketing data across various channels and <b>reducing the in-house post campaign analysis time by 50%.</b>
+            </ListItem>
+            <ListItem>
+            Scoping new products to fully utilize clients&apos; campaigns&apos; data, such as building performance predictor to accurately determine the upper and lower funnel performance parameters and <b>saving 20% cost on media planning and activation.</b>
+            </ListItem> 
+            <ListItem>
+              Developed and scheduled data pieplines to save third party reliance for ingesting marketing performance data from various platforms <b> economizing on cost by 4k$/month</b>
+            </ListItem> 
+            </UnorderedList>
         </ListItem>
-        <ListItem>
-          <Meta>Stack</Meta>
-          <span>NodeJS, Electron, React Native</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Blogpost</Meta>
-          <Link href="https://blog.inkdrop.app/how-ive-attracted-the-first-500-paid-users-for-my-saas-that-costs-5-mo-7a5b94b8e820">
-            How I’ve Attracted The First 500 Paid Users For My SaaS That Costs
-            $5/mo <ExternalLinkIcon mx="2px" />
-          </Link>
-        </ListItem>
+
+        
+
+        <ListItem>     
+          <Meta>Samsung</Meta>
+          <UnorderedList>
+            <ListItem> 
+            Google Cloud Platform (IAM,GKE,GCS,BigQuery)
+            </ListItem>
+            <ListItem> 
+            Python and SQL
+            </ListItem>
+            <ListItem> 
+            Salesforce Datorama
+            </ListItem>
+            <ListItem> 
+            Data Studio
+            </ListItem>
+       </UnorderedList>
+       </ListItem>
+   
+
       </List>
 
-      <WorkImage src="/images/works/inkdrop_01.png" alt="Inkdrop" />
-      <WorkImage src="/images/works/inkdrop_02.png" alt="Inkdrop" />
+     
+    </Container>
+
+      
     </Container>
   </Layout>
 )
 
-export default Work
-export { getServerSideProps } from '../../components/chakra'
+export default Post

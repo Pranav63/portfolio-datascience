@@ -60,7 +60,7 @@ const Page = () => {
 			Work Ex
 			</Heading>
 			<Paragraph>Pranav is based in Singapore 
-			and is a Data scientist working for Micron.
+			and currently working as a Data scientist for Micron.
 			 He is seasoned in analysing data and generating insights and 
 			 loves Python and ML. He loves tinkering with new technologies and 
 			 is very sincere at his job. He makes his living, trains his body 
@@ -87,19 +87,19 @@ const Page = () => {
 		</BioSection>
 		<BioSection>
 			<BioYear> 2014 </BioYear>
-			<Link href='https://www.linkedin.com/in/pranavarora63/overlay/1597390800123/single-media-viewer/'>Completed Bachelor&apos;s in Computer Science </Link>
+			Completed Bachelor&apos;s in Computer Science @ <Link href='https://www.upes.ac.in/'>UPES, India</Link>
 		</BioSection>
 		<BioSection>
 			<BioYear> 2019 </BioYear>
-			<Link href="https://www.linkedin.com/in/pranavarora63/overlay/1597390567194/single-media-viewer/"> Completed Master&apos;s at Singapore Management university (spl A.I)</Link>
+		 Completed Master&apos;s in A.I @  <Link href='https://www.smu.edu.sg/'>SMU, Singapore</Link>
 		</BioSection>
 		<BioSection>
 			<BioYear> 2020 </BioYear>
-			 Entered Corporate @Dentsu as Data Scientist 
+			Joined Corporate <Link href='https://www.iprospect.com/en/sg/'>@Dentsu</Link> as Jr. Data Scientist 
 		</BioSection>
 		<BioSection>
 			<BioYear> 2022 </BioYear>
-		Joined Micron Semiconductors as a Senior Data Scientist 
+		Switched to <Link href='https://sg.micron.com/'>Micron Semiconductors</Link> as a Senior Data Scientist 
 		</BioSection>
 		</Section>
 

@@ -24,13 +24,13 @@ const Works = () =>
 
 		<SimpleGrid columns={[1, 1, 2]} gap={6}>
             <Section>
-          <WorkGridItem id="Micron" title="Micron" thumbnail={Micron}>
-         Sr. Data Scientist(Jan 2022 - Present)
+          <WorkGridItem id="Micron" title="Sr. Data Scientist(Jan 2022-)" thumbnail={Micron}>
+         
           </WorkGridItem>
         </Section>
         <Section>
-          <WorkGridItem id="dentsu" title="Dentsu" thumbnail={denstu}>
-            Junior Data scientist(2020 - 2021)
+          <WorkGridItem id="dentsu" title="Junior Data scientist(2020 - 2021)" thumbnail={denstu}>
+            
           </WorkGridItem>
         </Section>
  
@@ -46,8 +46,8 @@ const Works = () =>
       </Section>
     <SimpleGrid columns={[1, 1, 1]} gap={6}>
         <Section>
-          <WorkGridItem id="walknote" title="Intern" thumbnail={Internn}>
-            Worked at Samsung and Dell as SDE intern 
+          <WorkGridItem id="intern" title="Worked at HP, Samsung, Dell as SDE intern " thumbnail={Internn}>
+            
           </WorkGridItem>
         </Section>
         </SimpleGrid>

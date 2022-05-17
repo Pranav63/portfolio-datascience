@@ -6,7 +6,7 @@ import P from '../components/paragraph'
 
 
 const Posts = () => (
-  <Layout title="Skills">
+  <Layout title="hardj">
     <Container>
       <Heading as="h3" fontSize={30} mb={4}>
         Skills
