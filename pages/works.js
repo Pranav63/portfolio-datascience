@@ -6,6 +6,7 @@ import Layout from "../components/layouts/article"
 import denstu from "../public/images/denstu.png"
 import Micron from "../public/images/Micron.jpeg"
 import Internn from "../public/images/MergedImages.png"
+import P from '../components/paragraph'
 
 const Works = () =>
 (
@@ -46,7 +47,7 @@ const Works = () =>
       </Section>
     <SimpleGrid columns={[1, 1, 1]} gap={6}>
         <Section>
-          <WorkGridItem id="intern" title="Worked at HP, Samsung, Dell as SDE intern " thumbnail={Internn}>
+          <WorkGridItem id="intern" title="Worked as a Data science/SDE intern " thumbnail={Internn}>
             
           </WorkGridItem>
         </Section>

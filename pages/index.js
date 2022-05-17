@@ -28,8 +28,7 @@ const Page = () => {
 			<Box borderRadius='lg' 
 			bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')}
 			 p={3} mb={6} align='center' font-weight= 'bold'>
-			  👋🏻 Hi there, I&apos;m Pranav Data Scientist in Singapore
-			</Box>
+			  👋🏻 Hi there, Welcome to my webspace.			</Box>
 			
 		
 		<Box display ={{md: 'flex'}}>
@@ -57,18 +56,17 @@ const Page = () => {
 </Box> 
 			<Section delay ={0.1}>
 			<Heading as="h3" variant ="section-title">
-			Work Ex
+			Intro
 			</Heading>
-			<Paragraph>Pranav is based in Singapore 
-			and currently working as a Data scientist for Micron.
-			 He is seasoned in analysing data and generating insights and 
-			 loves Python and ML. He loves tinkering with new technologies and 
-			 is very sincere at his job. He makes his living, trains his body 
-			 and lives on {''}
+			<Paragraph>I am based out of Singapore 🇸🇬 and working as a Data Scientist.<br/>
+			With great number of tools, comes a steep learning curve. I believe a data Scientist is someone
+			who is better at statistics than a software engineer and better at software engineering than a statistician.🧮 <br/>
+			I love testing new frameworks in my domain but without compromising on basic principles i.e do projects that add value to business.<br/>
+			I dont get intimated by jargons now,a model is just a fancy word for &apos;recipe&apos;.
+			
 			 
-			 <Link href="https:/github.com/Pranav63"> Github</Link>
 			 </Paragraph>
-			 <Box align="center" my={4}>
+			 <Box align="center" my={4} mt={10}>
 			 <NextLink href="/works">
 			 	<Button rightIcon={<ChevronRightIcon/>} colorScheme="teal">
 					My Portfolio
@@ -108,7 +106,7 @@ const Page = () => {
 				What I ❤️ doing outside work ?
 				</Heading>
 				<Paragraph>
-				Quizzing | Photography | Investing | Unfolding MCU Easter Eggs
+				Quizzing | Photography | Equity Investing | Unfolding Marvel&apos;s Easter Eggs
 				</Paragraph>
 
 		</Section>
