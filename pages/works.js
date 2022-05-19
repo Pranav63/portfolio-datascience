@@ -29,7 +29,7 @@ const Works = () =>
           </WorkGridItem>
         </Section>
         <Section>
-          <WorkGridItem id="dentsu" title="Junior Data scientist(2020 - 2021)" thumbnail={denstu}>
+          <WorkGridItem id="dentsu" title="Junior Data scientist(2020 - 2022)" thumbnail={denstu}>
             
           </WorkGridItem>
         </Section>
