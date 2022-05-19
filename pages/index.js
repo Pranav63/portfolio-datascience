@@ -62,7 +62,7 @@ const Page = () => {
 			With great number of tools, comes a steep learning curve. I believe a data Scientist is someone
 			who is better at statistics than a software engineer and better at software engineering than a statistician.🧮 <br/>
 			I love testing new frameworks in my domain but without compromising on basic principles i.e do projects that add value to business.<br/>
-			I dont get intimated by jargons now,a model is just a fancy word for &apos;recipe&apos;.
+			I dont get intimated by jargons now, a model is just a fancy word for &apos;recipe&apos;.
 			
 			 
 			 </Paragraph>

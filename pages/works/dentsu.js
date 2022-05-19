@@ -11,7 +11,7 @@ const Post = () => (
         Denstu
       </Heading>
       <Title>
-        Jr. Data Scientist <Badge>Aug 2020- Jan 2021</Badge>
+        Jr. Data Scientist <Badge>July 2020- Jan 2022</Badge>
       </Title>
    <Section delay={0.2}>
           <Divider my={6} />

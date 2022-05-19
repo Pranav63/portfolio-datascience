@@ -11,7 +11,7 @@ const Post = () => (
         Micron
       </Heading>
       <Title>
-        Sr. Data Scientist <Badge>Jan 2021 - Present</Badge>
+        Sr. Data Scientist <Badge>Jan 2022 - Present</Badge>
       </Title>
    <Section delay={0.2}>
           <Divider my={6} />
