@@ -32,9 +32,9 @@ const Posts = () => (
             href="https://github.com/Pranav63/Generative-adverserial-Networks-Face-profile-completion-"
           />
           <GridItem
-            title="Konekuta Data Pipeliner"
+            title="Data Pipeline Development"
             thumbnail={dataeng}
-            href="https://github.com/Pranav63/DataPipeliner"
+            
           />
         </SimpleGrid>
       </Section>

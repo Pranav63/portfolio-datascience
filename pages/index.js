@@ -21,6 +21,7 @@ import {
 	IoLogoLinkedin
 } from 'react-icons/io5'
 
+
 const Page = () => {
 	return(
 		<Layout>
