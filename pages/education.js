@@ -61,7 +61,7 @@ const Education = () => {
         <Heading as="h1" size="2xl" mb={4}>
           Educational Journey
         </Heading>
-        <Text fontSize="xl">"Teachers open the door, but you must enter by yourself"</Text>
+        <Text fontSize="xl">&quot;Teachers open the door, but you must enter by yourself&quot;</Text>
       </Box>
 
       <Container maxW="container.md">

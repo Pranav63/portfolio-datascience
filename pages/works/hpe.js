@@ -37,7 +37,7 @@ const Post = () => (
             Led a project on predicting production cycle times, enabling better resource allocation and production planning. This resulted in optimized manufacturing processes and reduced lead times.
           </ListItem>
           <ListItem>
-            Designed and implemented an in-house chatbot solution, "ChatHPE", utilizing GPT-4.0 with custom guardrails to ensure compliance with company policies. This enhanced internal communication and knowledge sharing while maintaining data security.
+            Designed and implemented an in-house chatbot solution, &quot;ChatHPE&quot;, utilizing GPT-4.0 with custom guardrails to ensure compliance with company policies. This enhanced internal communication and knowledge sharing while maintaining data security.
           </ListItem>
         </UnorderedList>
           </ListItem>

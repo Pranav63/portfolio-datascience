@@ -36,7 +36,7 @@ const Projects = () => {
             Projects
           </Heading>
           <Text mb={6} fontSize="lg">
-            "Create. Not for the money. Not for the recognition. But for the pure joy of creating something and sharing it."
+          &quot;Create. Not for the money. Not for the recognition. But for the pure joy of creating something and sharing it.&quot;
           </Text>
           <SimpleGrid columns={[1, 1, 2]} gap={6}>
             <GridItem
