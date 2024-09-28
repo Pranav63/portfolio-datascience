@@ -1,151 +1,230 @@
-import NextLink from 'next/link'
+import { useState, useCallback, useEffect } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 import {
-	Container, 
-	Box, 
-	Button,
-	Link,
-	Heading, 
-	Image, 
-	ListItem,
-	List,
-	Icon,
-	useColorModeValue} from '@chakra-ui/react'
+  Container, 
+  Box, 
+  Button,
+  Heading, 
+  ListItem,
+  List,
+  Icon,
+  useColorModeValue,
+  VStack,
+  HStack,
+  Text,
+  Flex,
+  SimpleGrid,
+  useColorMode
+} from '@chakra-ui/react'
+import { motion, useAnimation } from 'framer-motion'
 import Section from "../components/section"
 import Paragraph from "../components/paragraph"
-import {ChevronRightIcon} from "@chakra-ui/icons"
-import {BioSection, BioYear} from "../components/bio"
+import { ChevronRightIcon } from "@chakra-ui/icons"
+import { BioSection, BioYear } from "../components/bio"
 import Layout from "../components/layouts/article"
 import {
-	IoLogoInstagram,
-	IoLogoGithub,
-	IoLogoLinkedin
+  IoLogoInstagram,
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoSchool,
+  IoBriefcase,
+  IoCalendar
 } from 'react-icons/io5'
 
+const MotionBox = motion(Box)
+
+const ExternalLink = ({ href, children, ...props }) => (
+  <Link href={href} passHref>
+    <Box as="a" target="_blank" rel="noopener noreferrer" {...props}>
+      {children}
+    </Box>
+  </Link>
+)
 
 const Page = () => {
-	return(
-		<Layout>
-		<Container>
-			<Box borderRadius='lg' 
-			bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')}
-			 p={3} mb={6} align='center' font-weight= 'bold'>
-			  👋🏻 Hi there, Welcome to my webspace.			</Box>
-			
-		
-		<Box display ={{md: 'flex'}}>
-				<Box flexGrow ={1}>
-					<Heading as="h2" variant="page-title">
-					Pranav Arora
-					</Heading>
-				<p> (AS|EX)piring Data Scientist. Designing models by day Regularizing them by night.  
-				</p>
-				</Box>
-				<Box 
-				flexShrink={0} 
-				mt={{base: 4, md:6}} ml={{md:6}} align='center'
-				>
-				<Image 
-				borderColor="whiteAlpha.800" borderWidth={2}
-				src='/images/Pranav_Degree.jpg'
-				borderStyle="solid"
-				maxWidth="100px"
-				borderRadius="full"
-				display="inlink-block"
-				alt="Profile_image"
-				/>
-				</Box>
-</Box> 
-			<Section delay ={0.1}>
-			<Heading as="h3" variant ="section-title">
-			Intro
-			</Heading>
-			<Paragraph>I am based out of Singapore 🇸🇬 and working as a Data Scientist.<br/>
-			With great number of tools, comes a steep learning curve. I believe a data Scientist is someone
-			who is better at statistics than a software engineer and better at software engineering than a statistician.🧮 <br/>
-			I love testing new frameworks in my domain but without compromising on basic principles i.e do projects that add value to business.<br/>
-			I dont get intimated by jargons now, a model is just a fancy word for &apos;recipe&apos;.
-			
-			 
-			 </Paragraph>
-			 <Box align="center" my={4} mt={10}>
-			 <NextLink href="/works">
-			 	<Button rightIcon={<ChevronRightIcon/>} colorScheme="teal">
-					My Portfolio
-				</Button>
-			</NextLink>
-			</Box>
-			</Section>
+  const [imageLoaded, setImageLoaded] = useState(false)
+  const handleImageLoad = useCallback(() => setImageLoaded(true), [])
+  const controls = useAnimation()
+  const { colorMode } = useColorMode()
 
-		<Section delay={0.2}>
-			<Heading as="h3" variant="section-title">
-			Bio
-		</Heading>
-		<BioSection>
-			<BioYear> 1996 </BioYear>
-			Born and Feature Engineered in India 🇮🇳
-		</BioSection>
-		<BioSection>
-			<BioYear> 2014 </BioYear>
-			Completed Bachelor&apos;s in Computer Science @ <Link href='https://www.upes.ac.in/'>UPES, India</Link>
-		</BioSection>
-		<BioSection>
-			<BioYear> 2019 </BioYear>
-		 Completed Master&apos;s in A.I @  <Link href='https://www.smu.edu.sg/'>SMU, Singapore</Link>
-		</BioSection>
-		<BioSection>
-			<BioYear> 2020 </BioYear>
-			Joined Corporate <Link href='https://www.iprospect.com/en/sg/'>@Dentsu</Link> as Jr. Data Scientist 
-		</BioSection>
-		<BioSection>
-			<BioYear> 2022 </BioYear>
-		Switched to <Link href='https://sg.micron.com/'>Micron Semiconductors</Link> as a Senior Data Scientist 
-		</BioSection>
-		</Section>
+  useEffect(() => {
+    controls.start(i => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.1 }
+    }))
+  }, [controls])
 
-		<Section delay={0.3} >
-			<Heading as="h3" variant="section-title">
-				What I ❤️ doing outside work ?
-				</Heading>
-				<Paragraph>
-				Quizzing | Photography | Equity Investing | Unfolding Marvel&apos;s Easter Eggs
-				</Paragraph>
+  const bgColor = useColorModeValue('teal.100', 'teal.900')
+  const textColor = useColorModeValue('gray.800', 'white')
+  const cardBgColor = useColorModeValue('white', 'gray.700')
 
-		</Section>
+  return (
+    <Layout>
+      <Box
+        bg={bgColor}
+        color={textColor}
+        py={20}
+        textAlign="center"
+        borderRadius="3xl"
+        mb={10}
+      >
+        <Heading as="h1" size="2xl" mb={4}>
+          Welcome to My Webspace
+        </Heading>
+        <Text fontSize="xl">Exploring the O.G Data Science with GenAI lens</Text>
+      </Box>
 
-		<Section delay={0.3}>
-		<Heading as='h3' variant='section-title'>
-			Find me Across the Internet
-		</Heading>
-		<List>
-		<ListItem>
-			<Link href="https://www.linkedin.com/in/pranavarora63/" target="_blank">
-				<Button variant="ghost" colorScheme="teal" 
-				leftIcon={<Icon as={IoLogoLinkedin}/>}>
-				@Pranavarora63
-				</Button>
-			</Link>
-			</ListItem>
-			<ListItem>
-			<Link href="https:/github.com/Pranav63" target="_blank">
-				<Button variant="ghost" colorScheme="teal" 
-				leftIcon={<Icon as={IoLogoGithub}/>}>
-				@Pranav63
-				</Button>
-				</Link>
-			</ListItem>
-				<ListItem>
-			<Link href="https://www.instagram.com/arora.pranav1816/" target="_blank">
-				<Button variant="ghost" colorScheme="teal" 
-				leftIcon={<Icon as={IoLogoInstagram}/>}>
-				@Arora.pranav1816
-				</Button>
-			</Link>
-			</ListItem>
-		</List>
-		</Section>
-	</Container>
-	</Layout>
-					)
+      <Container maxW="container.md">
+        <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="space-between">
+          <VStack align="start" spacing={3}>
+            <Heading as="h2" size="xl" fontFamily="'Poppins', sans-serif">
+              Pranav Arora
+            </Heading>
+            <Text fontSize="lg" fontStyle="italic" color={useColorModeValue('gray.600', 'gray.300')}>
+              (AS|EX)piring Data Scientist
+            </Text>
+            <Text>Designing models by day, Regularizing them by night.</Text>
+          </VStack>
+          <Box 
+            borderRadius="full"
+            boxShadow="0 4px 20px rgba(0, 0, 0, 0.15)"
+            border="4px solid"
+            borderColor={useColorModeValue('teal.500', 'teal.300')}
+            overflow="hidden"
+            width="150px"
+            height="150px"
+            position="relative"
+            mt={{ base: 4, md: 0 }}
+          >
+            <Image 
+              src='/images/pranav_pho.png'
+              alt="Profile image"
+              layout="fill"
+              objectFit="cover"
+              quality={95}
+              priority
+              onLoad={handleImageLoad}
+            />
+          </Box>
+        </Flex>
+
+        <Section delay={0.1}>
+          <Heading as="h3" variant="section-title" fontFamily="'Poppins', sans-serif">
+            Intro
+          </Heading>
+          <Paragraph>
+            I am based out of Singapore 🇸🇬 and working as a Data Scientist. With great number of tools, comes a steep learning curve. I believe a data Scientist is someone who is better at statistics than a software engineer and better at software engineering than a statistician.🧮 
+            <br /><br />
+            I love testing new frameworks in my domain but without compromising on basic principles i.e do projects that add value to business. I don't get intimidated by jargons now, a model is just a fancy word for 'recipe'.
+          </Paragraph>
+          <Box align="center" my={8}>
+            <Link href="/works" passHref>
+              <Button 
+                as="a" 
+                rightIcon={<ChevronRightIcon/>} 
+                colorScheme="teal"
+                size="lg"
+                fontWeight="bold"
+                borderRadius="full"
+                _hover={{ transform: 'translateY(-2px)', boxShadow: 'lg' }}
+                transition="all 0.2s"
+              >
+                Explore My Portfolio
+              </Button>
+            </Link>
+          </Box>
+        </Section>
+
+        <Section delay={0.2}>
+          <Heading as="h3" variant="section-title" fontFamily="'Poppins', sans-serif">
+            Bio
+          </Heading>
+          <VStack align="start" spacing={4}>
+            {[
+              { year: '1996', text: 'Born and Feature Engineered in India 🇮🇳', icon: IoCalendar },
+              { year: '2014', text: 'Completed Bachelor\'s in Computer Science @ UPES, India', icon: IoSchool, link: 'https://www.upes.ac.in/' },
+              { year: '2019', text: 'Completed Master\'s in A.I @ SMU, Singapore', icon: IoSchool, link: 'https://www.smu.edu.sg/' },
+              { year: '2020', text: 'Joined Corporate @Dentsu as Jr. Data Scientist', icon: IoBriefcase, link: 'https://www.iprospect.com/en/sg/' },
+              { year: '2022', text: 'Worked at Micron Semiconductors as a Data Scientist', icon: IoBriefcase, link: 'https://sg.micron.com/' },
+              { year: '2024', text: 'Joined Hewlett Packard Enterprise as a Senior Data Scientist', icon: IoBriefcase, link: 'https://www.hpe.com/us/en/home.html' }
+            ].map((item, index) => (
+              <MotionBox
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={controls}
+                custom={index}
+              >
+                <HStack spacing={4}>
+                  <Icon as={item.icon} boxSize={6} color="teal.500" />
+                  <BioSection>
+                    <BioYear>{item.year}</BioYear>
+                    {item.link ? (
+                      <Link href={item.link}>
+                        <Text as="span" cursor="pointer" _hover={{ textDecoration: 'underline' }}>
+                          {item.text}
+                        </Text>
+                      </Link>
+                    ) : item.text}
+                  </BioSection>
+                </HStack>
+              </MotionBox>
+            ))}
+          </VStack>
+        </Section>
+
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title" fontFamily="'Poppins', sans-serif">
+            What I ❤️ doing outside work
+          </Heading>
+          <SimpleGrid columns={[2, null, 4]} spacing={4}>
+            {['Quizzing', 'Photography', 'Equity Investing', 'Unfolding Marvel\'s Easter Eggs'].map((hobby, index) => (
+              <MotionBox
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={controls}
+                custom={index}
+                bg={cardBgColor}
+                p={4}
+                borderRadius="2xl"
+                textAlign="center"
+                boxShadow="md"
+                _hover={{ transform: 'translateY(-5px)', transition: 'transform 0.2s' }}
+              >
+                {hobby}
+              </MotionBox>
+            ))}
+          </SimpleGrid>
+        </Section>
+
+        <Section delay={0.3}>
+          <Heading as='h3' variant='section-title' fontFamily="'Poppins', sans-serif">
+            Find me Across the Internet
+          </Heading>
+          <HStack spacing={4} justify="center" wrap="wrap">
+            {[
+              { icon: IoLogoLinkedin, label: '@Pranavarora63', href: 'https://www.linkedin.com/in/pranavarora63/' },
+              { icon: IoLogoGithub, label: '@Pranav63', href: 'https://github.com/Pranav63' },
+              { icon: IoLogoInstagram, label: '@Arora.pranav1816', href: 'https://www.instagram.com/arora.pranav1816/' }
+            ].map((item, index) => (
+              <ExternalLink key={index} href={item.href}>
+                <Button
+                  variant="outline"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={item.icon} />}
+                  borderRadius="full"
+                  _hover={{ bg: 'teal.500', color: 'white' }}
+                >
+                  {item.label}
+                </Button>
+              </ExternalLink>
+            ))}
+          </HStack>
+        </Section>
+      </Container>
+    </Layout>
+  )
 }
 
 export default Page

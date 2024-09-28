@@ -1,140 +1,149 @@
+import { useState } from 'react'
 import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import { WorkImage, Meta } from '../components/work' 
-import { Container,List, ListItem, UnorderedList,Heading, Divider  } from '@chakra-ui/react'
-import P from '../components/paragraph'
+import { motion } from 'framer-motion'
+import { 
+  Container, Box, Heading, Text, SimpleGrid, useColorModeValue, 
+  VStack, HStack, Icon, Tooltip
+} from '@chakra-ui/react'
+import { FaPython, FaDatabase, FaChartBar, FaRobot, FaReact } from 'react-icons/fa'
+import { SiTensorflow, SiPytorch, SiScikitlearn, SiPandas, SiNumpy, SiOpencv, SiTableau, SiGooglecloud } from 'react-icons/si'
 
+const SkillCategory = ({ title, icon, skills }) => {
+  const bgColor = useColorModeValue('white', 'gray.800')
+  const borderColor = useColorModeValue('gray.200', 'gray.600')
 
-const Posts = () => (
-  <Layout title="Skills">
-    <Container>
-      <Heading as="h3" fontSize={30} mb={4}>
-        Skills
-      </Heading>
-   <Section delay={0.2}>
-          <Divider my={6} />
-        </Section>
-  
- <Container>
-      <P>
-       &apos;Schooling doesn&apos;t assure employment but skill does.&apos;
-      </P>
-       <WorkImage src="/images/skill.gif" alt="skill" />
-     
-      <List ml={4} my={5}>
-        <ListItem>
-          <Meta> Data Science Packages </Meta>
- 			<UnorderedList>
-            <ListItem> 
-            NumPy
-            </ListItem>
-            <ListItem> 
-            Pandas
-            </ListItem>
-            <ListItem> 
-            MatplotLib
-            </ListItem>
-            <ListItem> 
-            OpenCV
-            </ListItem>
-            <ListItem> 
-            Scikit-Learn
-            </ListItem>
-            <ListItem> 
-            DeepSim
-            </ListItem>
-            <ListItem> 
-            Beautiful Soup
-            </ListItem>
-            </UnorderedList>
-        </ListItem> 
+  return (
+    <Box 
+      borderWidth={1}
+      borderRadius="lg"
+      borderColor={borderColor}
+      p={6}
+      bg={bgColor}
+      boxShadow="lg"
+      transition="all 0.3s"
+      _hover={{ transform: 'translateY(-5px)', boxShadow: 'xl' }}
+    >
+      <VStack align="start" spacing={4}>
+        <HStack>
+          <Icon as={icon} boxSize={8} color={useColorModeValue('teal.500', 'teal.300')} />
+          <Heading size="md">{title}</Heading>
+        </HStack>
+        <SimpleGrid columns={[2, 3]} spacing={2}>
+          {skills.map((skill, index) => (
+            <Tooltip key={index} label={skill.name} placement="top">
+              <Box>
+                <Icon 
+                  as={skill.icon} 
+                  boxSize={8} 
+                  color={useColorModeValue('gray.600', 'gray.400')}
+                  _hover={{ color: useColorModeValue('teal.500', 'teal.300') }}
+                />
+              </Box>
+            </Tooltip>
+          ))}
+        </SimpleGrid>
+      </VStack>
+    </Box>
+  )
+}
 
-        <ListItem>
-    
-          <Meta>Programming Languages</Meta>
-          <UnorderedList>
-            <ListItem> 
-            Python
-            </ListItem>
-            <ListItem>
-            SQL
-            </ListItem> 
-            <ListItem>
-            Bash Scripting
-            </ListItem> 
-            </UnorderedList>
-        </ListItem>
+const SkillsPage = () => {
+  const bgColor = useColorModeValue('teal.100', 'teal.900')
+  const textColor = useColorModeValue('gray.800', 'white')
 
-        <ListItem>
-        
-          <Meta>DataBase and BigData</Meta>
-          <UnorderedList>
-            <ListItem> 
-            Google Cloud Storage
-            </ListItem>
-            <ListItem> 
-            Big Query 
-            </ListItem>
-            <ListItem> 
-            Spark
-            </ListItem>
-        </UnorderedList>
-        </ListItem>
+  const skillCategories = [
+    {
+      title: 'Data Science & ML',
+      icon: FaChartBar,
+      skills: [
+        { name: 'NumPy', icon: SiNumpy },
+        { name: 'Pandas', icon: SiPandas },
+        { name: 'Scikit-Learn', icon: SiScikitlearn },
+        { name: 'TensorFlow', icon: SiTensorflow },
+        { name: 'PyTorch', icon: SiPytorch },
+        { name: 'OpenCV', icon: SiOpencv },
+      ]
+    },
+    {
+      title: 'Programming',
+      icon: FaPython,
+      skills: [
+        { name: 'Python', icon: FaPython },
+        { name: 'SQL', icon: FaDatabase },
+        { name: 'Bash Scripting', icon: FaDatabase },
+      ]
+    },
+    {
+      title: 'Big Data & Cloud',
+      icon: SiGooglecloud,
+      skills: [
+        { name: 'Google Cloud Storage', icon: SiGooglecloud },
+        { name: 'BigQuery', icon: SiGooglecloud },
+        { name: 'Spark', icon: FaDatabase },
+      ]
+    },
+    {
+      title: 'Visualization',
+      icon: SiTableau,
+      skills: [
+        { name: 'Data Studio', icon: SiGooglecloud },
+        { name: 'Datorama', icon: FaChartBar },
+        { name: 'Tableau', icon: SiTableau },
+      ]
+    },
+    {
+      title: 'Generative AI',
+      icon: FaRobot,
+      skills: [
+        { name: 'GPT-4', icon: FaRobot },
+        { name: 'DALL-E', icon: FaRobot },
+        { name: 'Stable Diffusion', icon: FaRobot },
+      ]
+    },
+    {
+      title: 'Web Development',
+      icon: FaReact,
+      skills: [
+        { name: 'ReactJS', icon: FaReact },
+        { name: 'Flask', icon: FaPython },
+        { name: 'Google ML API', icon: SiGooglecloud },
+      ]
+    },
+  ]
 
-        <ListItem>     
-          <Meta>Artificial Intelligence</Meta>
-          <UnorderedList>
-            <ListItem> 
-            Machine Learning
-            </ListItem>
-            <ListItem> 
-            Statistical Modelling
-            </ListItem>
-            <ListItem> 
-            Data Wrangling
-            </ListItem>
-       </UnorderedList>
-       </ListItem>
-       
-   <ListItem>
-          <Meta> Viz Tools </Meta>
-          <UnorderedList>
-           <ListItem> 
-            Data Studio
-            </ListItem>
-            <ListItem> 
-            Datorama (Salesforce)
-            </ListItem>
-            <ListItem> 
-            Tableau
-            </ListItem>
-       </UnorderedList>
-       </ListItem>
+  return (
+    <Layout title="Skills">
+      <Box
+        bg={bgColor}
+        color={textColor}
+        py={20}
+        textAlign="center"
+        borderRadius="3xl"
+        mb={10}
+      >
+        <Heading as="h1" size="2xl" mb={4}>
+          Skills & Expertise
+        </Heading>
+        <Text fontSize="xl">'Schooling doesn't assure employment, but skill does.'</Text>
+      </Box>
 
-         <ListItem>
-          <Meta> APIs and Frameworks </Meta>
-          <UnorderedList>
-           <ListItem> 
-            ReactJS
-            </ListItem>
-            <ListItem> 
-            Flask
-            </ListItem>
-            <ListItem> 
-            Google ML 
-            </ListItem>
-       </UnorderedList>
-       </ListItem>
+      <Container maxW="container.xl" mt={10}>
+        <SimpleGrid columns={[1, 1, 2, 3]} spacing={8}>
+          {skillCategories.map((category, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <SkillCategory {...category} />
+            </motion.div>
+          ))}
+        </SimpleGrid>
+      </Container>
+    </Layout>
+  )
+}
 
-      </List>
-
-     
-    </Container>
-
-      
-    </Container>
-  </Layout>
-)
-
-export default Posts
+export default SkillsPage
 export { getServerSideProps } from '../components/chakra'
