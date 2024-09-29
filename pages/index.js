@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+
 import {
   Container, 
   Box, 
@@ -73,7 +74,7 @@ const Page = () => {
         <Heading as="h1" size="2xl" mb={4}>
           Welcome to My Webspace
         </Heading>
-        <Text fontSize="xl">Exploring the O.G Data Science with GenAI lens</Text>
+        <Text fontSize="xl">Exploring the O.G Data Science with GenAI 🔎</Text>
       </Box>
 
       <Container maxW="container.md">
