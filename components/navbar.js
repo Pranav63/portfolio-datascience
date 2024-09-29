@@ -12,26 +12,29 @@ import {
   MenuList,
   MenuButton,
   IconButton,
-  useColorModeValue
+  Button,
+  useColorModeValue,
+  useColorMode
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import ThemeToggleButton from './theme-toggle-button'
+import { FaSun, FaMoon } from 'react-icons/fa'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
   return (
     <Link href={href} passHref>
-      <Box
+      <Button
         as="a"
-        p={2}
-        bg={active ? 'cyan' : undefined}
-        color={active ? '#202023' : inactiveColor}
+        variant={active ? "solid" : "ghost"}
+        colorScheme={active ? "teal" : ""}
+        bg={active ? 'teal.500' : 'transparent'}
+        color={active ? 'white' : inactiveColor}
         target={target}
         {...props}
       >
         {children}
-      </Box>
+      </Button>
     </Link>
   )
 }
@@ -39,6 +42,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 const NavBar = props => {
   const { path } = props
   const [isOpen, setIsOpen] = useState(false)
+  const { colorMode, toggleColorMode } = useColorMode()
 
   const toggleMenu = () => setIsOpen(!isOpen)
 
@@ -47,15 +51,16 @@ const NavBar = props => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue('#ffffff40', '#20202380')}
+      bg={useColorModeValue('rgba(255, 255, 255, 0.8)', 'rgba(26, 32, 44, 0.8)')}
       style={{ backdropFilter: 'blur(10px)' }}
       zIndex={1}
+      boxShadow="0 2px 10px rgba(0,0,0,0.1)"
       {...props}
     >
       <Container
         display="flex"
         p={2}
-        maxW="container.md"
+        maxW="container.lg"
         wrap="wrap"
         align="center"
         justify="space-between"
@@ -73,6 +78,7 @@ const NavBar = props => {
           alignItems="center"
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
+          spacing={4}
         >
           <LinkItem href="/works" path={path}>
             Work Ex
@@ -96,8 +102,14 @@ const NavBar = props => {
         </Stack>
 
         <Box flex={1} align="right">
-          <ThemeToggleButton />
-          <Box ml={2} display={{ base: 'inline-block' }}>
+          <IconButton
+            aria-label="Toggle theme"
+            colorScheme="teal"
+            icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
+            onClick={toggleColorMode}
+            mr={2}
+          />
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu" isOpen={isOpen} onClose={() => setIsOpen(false)}>
               <MenuButton
                 as={IconButton}

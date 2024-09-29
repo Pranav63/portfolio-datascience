@@ -3,7 +3,7 @@ import Layout from '../components/layouts/article'
 import { motion } from 'framer-motion'
 import { 
   Container, Box, Heading, Text, SimpleGrid, useColorModeValue, 
-  VStack, HStack, Icon, Tooltip
+  VStack, HStack, Icon, Tooltip, Flex
 } from '@chakra-ui/react'
 import { FaPython, FaDatabase, FaChartBar, FaRobot, FaReact } from 'react-icons/fa'
 import { SiTensorflow, SiPytorch, SiScikitlearn, SiPandas, SiNumpy, SiOpencv, SiTableau, SiGooglecloud } from 'react-icons/si'
@@ -22,22 +22,24 @@ const SkillCategory = ({ title, icon, skills }) => {
       boxShadow="lg"
       transition="all 0.3s"
       _hover={{ transform: 'translateY(-5px)', boxShadow: 'xl' }}
+      height="100%"
     >
-      <VStack align="start" spacing={4}>
+      <VStack align="start" spacing={4} height="100%">
         <HStack>
           <Icon as={icon} boxSize={8} color={useColorModeValue('teal.500', 'teal.300')} />
           <Heading size="md">{title}</Heading>
         </HStack>
-        <SimpleGrid columns={[2, 3]} spacing={2}>
+        <SimpleGrid columns={3} spacing={2} width="100%">
           {skills.map((skill, index) => (
             <Tooltip key={index} label={skill.name} placement="top">
-              <Box>
+              <Box textAlign="center">
                 <Icon 
                   as={skill.icon} 
                   boxSize={8} 
                   color={useColorModeValue('gray.600', 'gray.400')}
                   _hover={{ color: useColorModeValue('teal.500', 'teal.300') }}
                 />
+                <Text fontSize="xs" mt={1}>{skill.name}</Text>
               </Box>
             </Tooltip>
           ))}
@@ -62,6 +64,18 @@ const SkillsPage = () => {
         { name: 'TensorFlow', icon: SiTensorflow },
         { name: 'PyTorch', icon: SiPytorch },
         { name: 'OpenCV', icon: SiOpencv },
+      ]
+    },
+    {
+      title: 'Generative AI',
+      icon: FaRobot,
+      skills: [
+        { name: 'LLM Modeling', icon: FaRobot },
+        { name: 'LLM Governance', icon: FaRobot },
+        { name: 'Prompt Engineering', icon: FaRobot },
+        { name: 'GPT-4', icon: FaRobot },
+        { name: 'DALL-E', icon: FaRobot },
+        { name: 'Stable Diffusion', icon: FaRobot },
       ]
     },
     {
@@ -92,15 +106,6 @@ const SkillsPage = () => {
       ]
     },
     {
-      title: 'Generative AI',
-      icon: FaRobot,
-      skills: [
-        { name: 'GPT-4', icon: FaRobot },
-        { name: 'DALL-E', icon: FaRobot },
-        { name: 'Stable Diffusion', icon: FaRobot },
-      ]
-    },
-    {
       title: 'Web Development',
       icon: FaReact,
       skills: [
@@ -128,18 +133,33 @@ const SkillsPage = () => {
       </Box>
 
       <Container maxW="container.xl" mt={10}>
-        <SimpleGrid columns={[1, 1, 2, 3]} spacing={8}>
-          {skillCategories.map((category, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <SkillCategory {...category} />
-            </motion.div>
-          ))}
-        </SimpleGrid>
+        <VStack spacing={8}>
+          <Flex width="100%" gap={8}>
+            {skillCategories.slice(0, 2).map((category, index) => (
+              <Box key={index} flex={1}>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <SkillCategory {...category} />
+                </motion.div>
+              </Box>
+            ))}
+          </Flex>
+          <SimpleGrid columns={[1, 1, 2, 2]} spacing={8} width="100%">
+            {skillCategories.slice(2).map((category, index) => (
+              <motion.div
+                key={index + 2}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: (index + 2) * 0.1 }}
+              >
+                <SkillCategory {...category} />
+              </motion.div>
+            ))}
+          </SimpleGrid>
+        </VStack>
       </Container>
     </Layout>
   )
